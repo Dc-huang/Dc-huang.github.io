@@ -1,70 +1,76 @@
-const getRealPath = (pathname, desc = false) => {
-  if (!pathname) {
-    pathname = window.location.pathname;
-  }
-  let names = pathname.split("/");
-  if (desc === false) {
-    for (let i = names.length - 1; i >= 0; --i) {
-      let name = names[i].trim();
-      if (name.length > 0 && name !== "/" && name !== "index.html") {
-        return name;
-      }
+(function ($) {
+
+  "use strict";
+
+  var toggleActive = function (self, e) {
+    e.preventDefault();
+    if (self.hasClass("active") === true) {
+      self.removeClass("active");
+    } else {
+      self.addClass("active");
     }
-  } else {
-    for (let i = 0; i < names.length; ++i) {
-      let name = names[i].trim();
-      if (name.length > 0 && name !== "/" && name !== "index.html") {
-        return name;
-      }
+  };
+
+  var switchSidebarTab = function (e) {
+    var self = $(this),
+      target = self.attr('data-toggle'),
+      counter_target = target === 'toc' ? 'bio' : 'toc';
+    if (self.hasClass('active')) {
+      return;
     }
-  }
-  return "/";
-};
-let links = document.querySelectorAll(".nexmoe-list-item");
-let rootRealPath = getRealPath(window.location.pathname, true);
-for (let link of links) {
-  let linkPath = link.getAttribute("href");
-  if (linkPath && getRealPath(linkPath, true) === rootRealPath) {
-    link.className = "active nexmoe-list-item mdui-list-item mdui-ripple";
-  }
-}
+    toggleActive(self, e);
+    toggleActive(self.siblings('.dark-btn'), e);
+    $('.site-' + counter_target).toggleClass('show');
+    setTimeout(function () {
+      $('.site-' + counter_target).hide();
+      $('.site-' + target).show();
+      setTimeout(function () {
+        $('.site-' + target).toggleClass('show');
+      }, 50);
+    }, 240);
+  };
 
-// 表格相册
-$("table")
-  .has("img")
-  .addClass("nexmoe-album");
+  var scrolltoElement = function (e) {
+    e.preventDefault();
+    var self = $(this),
+      correction = e.data ? e.data.correction ? e.data.correction : 0 : 0;
+    $('html, body').animate({'scrollTop': $(self.attr('href')).offset().top - correction}, 400);
+  };
 
-// 搜索
-function search() {
-  window.open($("#search_form").attr("action_e") + " " + $("#search_value").val());
-  return false;
-}
+  var closeMenu = function (e) {
+    e.stopPropagation();
+    $('body').removeClass('menu-open');
+    $('#site-nav-switch').removeClass('active');
+  };
 
-// 平滑跳转同时修复锚点链接被转义
-$(document).ready(function () {
-  $("a.toc-link").click(function (ev) {
-    ev.preventDefault();
-    $("html, body").animate({
-      scrollTop: $(decodeURI($(this).attr("href"))).offset().top - 25
-    }, {
-      duration: 500,
-      easing: "swing"
-    });
+  var toggleMenu = function (e) {
+    e.stopPropagation();
+    $('body').toggleClass('menu-open');
+    $('#site-nav-switch').toggleClass('active');
+  };
+
+  var pixivArchiveStat = function () {
+    var vol = $(".article-entry ul").length;
+    var artistCount = $(".article-entry ul li").length;
+    $("#pixiv-vol").text(vol);
+    $("#pixiv-artist-count").text(artistCount);
+  };
+
+  $(function () {
+    $('#footer, #main').addClass('loaded');
+    $('#site-nav-switch').on('click', toggleMenu);
+    $('#site-wrapper .overlay, #sidebar-close').on('click', closeMenu);
+    $('.window-nav, .site-toc a').on('click', scrolltoElement);
+    $(".content .video-container").fitVids();
+    $('#site-sidebar .sidebar-switch .dark-btn').on('click', switchSidebarTab);
+
+    if (window.location.pathname === '/pixiv' || window.location.pathname === '/pixiv/') {
+      pixivArchiveStat();
+    }
+
+    setTimeout(function () {
+      $('#loading-bar-wrapper').fadeOut(500);
+    }, 300);
   });
-});
 
-function catalogue() {
-  var inst = new mdui.Drawer('#drawer');
-  inst.toggle();
-  $("body").toggleClass("catalogue");
-}
-
-$(document).on("copy", function(){
-  if(!window.copyTip){ return; }
-  var sel = document.getSelection();
-  var ele = document.createElement("div");
-  ele.innerHTML = '<div style="position: fixed;opacity: 0;white-space: pre;">' + sel + "\n\n" + window.copyTip.replaceAll("%url",document.location.href) + ' </div>' 
-  document.body.appendChild(ele);
-  sel.selectAllChildren(ele);
-  setTimeout(function () {document.body.removeChild(ele);});
-});
+})(jQuery);
