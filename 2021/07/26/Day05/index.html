@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="变量作用域12345678public class Variable&amp;#123;    static int allClicks&#x3D;0;		&#x2F;&#x2F;类变量    String str&#x3D;&quot;hello world&quot;;		&#x2F;&#x2F;实例变量        public void method()&amp;#123;        int i&#x3D;0;		&#x2F;&#x2F;局部变量    &amp;#125;&amp;#125;">
+  <meta name="description" content="变量作用域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习篇-04">
 <meta property="og:url" content="https://dc-huang.github.io/2021/07/26/Day05/index.html">
 <meta property="og:site_name" content="喵乜菓">
-<meta property="og:description" content="变量作用域12345678public class Variable&amp;#123;    static int allClicks&#x3D;0;		&#x2F;&#x2F;类变量    String str&#x3D;&quot;hello world&quot;;		&#x2F;&#x2F;实例变量        public void method()&amp;#123;        int i&#x3D;0;		&#x2F;&#x2F;局部变量    &amp;#125;&amp;#125;">
+<meta property="og:description" content="变量作用域">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://dc-huang.github.io/images/1627128236680.webp">
 <meta property="article:published_time" content="2021-07-26T06:46:05.613Z">
-<meta property="article:modified_time" content="2021-07-26T07:07:22.782Z">
+<meta property="article:modified_time" content="2021-07-26T07:11:05.858Z">
 <meta property="article:author" content="hunagkun yang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dc-huang.github.io/images/1627128236680.webp">
@@ -156,7 +156,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        427
+                        429
                     
                     字
                 </li>
@@ -165,7 +165,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1627283242782"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1627283465858"></time> 前，其中的内容可能需要更新。
             </div>
             
                 <div class="kratos-post-inner-toc">
@@ -173,7 +173,9 @@
                 </div>
             
             <hr />
-            <h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> allClicks=<span class="number">0</span>;		<span class="comment">//类变量</span></span><br><span class="line">    String str=<span class="string">&quot;hello world&quot;</span>;		<span class="comment">//实例变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;		<span class="comment">//局部变量</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><span id="more"></span>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> allClicks=<span class="number">0</span>;		<span class="comment">//类变量</span></span><br><span class="line">    String str=<span class="string">&quot;hello world&quot;</span>;		<span class="comment">//实例变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;		<span class="comment">//局部变量</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -267,7 +269,7 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://dc-huang.github.io/2021/07/26/Day05/";
             const title         = "「学习篇-04」";
-            const excerpt       = `变量作用域12345678public class Variable&#123;    static int allClicks=0;		//类变量    String str=&quot;hello world&quot;;		//...`;
+            const excerpt       = `变量作用域`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
