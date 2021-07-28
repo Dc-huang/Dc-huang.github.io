@@ -18,16 +18,16 @@
   <meta name="description" content="通过hexo搭建个人blog部署到github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习篇-01">
-<meta property="og:url" content="https://dc-huang.github.io/2021/07/24/Day01/index.html">
+<meta property="og:url" content="https://dc-huang.github.io/2021/07/24/Study01/index.html">
 <meta property="og:site_name" content="喵乜菓">
 <meta property="og:description" content="通过hexo搭建个人blog部署到github">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dc-huang.github.io/2021/07/24/Day01/head.webp">
+<meta property="og:image" content="https://dc-huang.github.io/2021/07/24/Study01/head.webp">
 <meta property="article:published_time" content="2021-07-24T06:26:42.661Z">
 <meta property="article:modified_time" content="2021-07-26T07:07:10.664Z">
 <meta property="article:author" content="hunagkun yang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dc-huang.github.io/2021/07/24/Day01/head.webp">
+<meta name="twitter:image" content="https://dc-huang.github.io/2021/07/24/Study01/head.webp">
 <meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
@@ -186,12 +186,12 @@
 </li>
 <li><p>下载配置：</p>
 <p>下载好安装包后，安装到D盘（一般放在D盘），点击next直到遇到下图选项：</p>
-<p><img src="/2021/07/24/Day01/gitforwin.png" alt="gitforwin"></p>
+<p><img src="/2021/07/24/Study01/gitforwin.png" alt="gitforwin"></p>
 <p><strong>这里勾选第二个</strong>，然后一直点击next完成安装就可以了。</p>
 </li>
 <li><p>打开<strong>git bash</strong>:</p>
 <p>在桌面右键点击出现<strong>git bash here</strong>选项，点击打开，界面如下：</p>
-<p><img src="/2021/07/24/Day01/gitbash.png" alt="gitbash"></p>
+<p><img src="/2021/07/24/Study01/gitbash.png" alt="gitbash"></p>
 </li>
 <li><p>操作命令：</p>
 <p>类似于<strong>dos</strong>命令，这里简单介绍几个命令——</p>
@@ -208,9 +208,9 @@
 <p>或者搜索node，进入官网</p>
 </li>
 <li><p>点击左边的长期支持版本（LTS）：</p>
-<p><img src="/2021/07/24/Day01/Inkednode.jpg" alt="Inkednode"></p>
+<p><img src="/2021/07/24/Study01/Inkednode.jpg" alt="Inkednode"></p>
 <p><strong>下载完开始安装，选择D盘</strong></p>
-<p><img src="/2021/07/24/Day01/node.png" alt="node"></p>
+<p><img src="/2021/07/24/Study01/node.png" alt="node"></p>
 <p>点击**Add to PATH(添加环境变量)**，点击next直到完成安装。</p>
 </li>
 <li><p>检查<strong>node</strong>和<strong>npm</strong>：</p>
@@ -223,11 +223,11 @@
 <h3 id="3、下载hexo建立blog文件夹"><a href="#3、下载hexo建立blog文件夹" class="headerlink" title="3、下载hexo建立blog文件夹"></a>3、下载hexo建立blog文件夹</h3><ol>
 <li><p>打开git bash 界面，输入 <strong>npm install -g hexo-cli</strong>命令（下载时间可能有点久），下载完成后输入<strong>hexo -v</strong>命令</p>
 <p>查看hexo版本信息，比如下图：</p>
-<p><img src="/2021/07/24/Day01/hexo.png" alt="hexo"></p>
+<p><img src="/2021/07/24/Study01/hexo.png" alt="hexo"></p>
 </li>
 <li><p>在D盘建立一个blog文件夹，然后我们就可以进行hexo的初始化了，步骤如下：</p>
 <p>打开git bash 进入到blog文件夹下面，输入<strong>hexo init</strong>命令（需要等待一会），然后输入<strong>ls -l</strong>命令或者直接找到<strong>blog文件夹</strong>就可以看到生成的blog文件了：</p>
-<p><img src="/2021/07/24/Day01/bloginit.png" alt="bloginit"></p>
+<p><img src="/2021/07/24/Study01/bloginit.png" alt="bloginit"></p>
 </li>
 </ol>
 <hr>
@@ -236,21 +236,21 @@
 <li><p>打开 git bash 输入 <strong>ssh-keygen -t rsa -C “用于注册github账号的邮箱”</strong> 命令，然后一直回车即可。</p>
 </li>
 <li><p>通过git bash 刚才的生成界面可以查看到生成的文件路径：</p>
-<p><img src="/2021/07/24/Day01/sshwhere.png" alt="sshwhere"></p>
+<p><img src="/2021/07/24/Study01/sshwhere.png" alt="sshwhere"></p>
 <p><strong>然后文本打开后缀为pub的文件，选择复制里面的所有内容。</strong></p>
 </li>
 <li><p>打开github账户，点击个人头像点击Settings选项，在左侧找到 <strong>SSH and GPG keys</strong> 选项点击，在界面右上角<strong>new一个ssh钥匙</strong>：</p>
-<p><img src="/2021/07/24/Day01/sshnew.png" alt="sshnew"></p>
+<p><img src="/2021/07/24/Study01/sshnew.png" alt="sshnew"></p>
 <p><strong>将第二步里面复制的文本粘贴到key那一栏中</strong>，title随便取一个名字就好，最后add ssh key。</p>
 </li>
 </ol>
 <hr>
 <h2 id="将blog部署到github"><a href="#将blog部署到github" class="headerlink" title="将blog部署到github"></a>将blog部署到github</h2><h3 id="1、检查本地blog是否布置成功"><a href="#1、检查本地blog是否布置成功" class="headerlink" title="1、检查本地blog是否布置成功"></a>1、检查本地blog是否布置成功</h3><p>因为hexo自带一个blog模板，因此可以通过git bash进入blog路径下输入 hexo s 命令<strong>（注意！之后的操作都是在blog文件路径下，如果出现了什么不可以解决的问题，直接删除blog文件夹，然后重新建立blog文件重复之前的操作即可）</strong>：</p>
-<p><img src="/2021/07/24/Day01/hexos.png" alt="hexos"></p>
+<p><img src="/2021/07/24/Study01/hexos.png" alt="hexos"></p>
 <p>打开浏览器输入上图网址即可查看本地布置的预览效果。</p>
 <h3 id="2、将blog部署到github"><a href="#2、将blog部署到github" class="headerlink" title="2、将blog部署到github"></a>2、将blog部署到github</h3><ol>
 <li><p>打开github账号new一个新的仓库：</p>
-<p><img src="/2021/07/24/Day01/githubnew.png" alt="githubnew"></p>
+<p><img src="/2021/07/24/Study01/githubnew.png" alt="githubnew"></p>
 <p>接着填写repository name，注意这里必须填写<strong>你的github用户名+ .github + .io</strong>，然后点击create创建好一个空仓库，然后就不用管了。</p>
 </li>
 <li><p>配置_config.yml文件：</p>
@@ -352,7 +352,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://dc-huang.github.io/2021/07/24/Day01/",
+                text: "https://dc-huang.github.io/2021/07/24/Study01/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -364,7 +364,7 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://dc-huang.github.io/2021/07/24/Day01/";
+            const hostUrl       = "https://dc-huang.github.io/2021/07/24/Study01/";
             const title         = "「学习篇-01」";
             const excerpt       = `通过hexo搭建个人blog部署到github`;
             let _URL;
@@ -398,7 +398,7 @@
             
             
             <div class="nav-next clearfix">
-                <a title=" 学习篇-02" href="/2021/07/25/Day02/">下一篇 &gt;</a>
+                <a title=" 学习篇-02" href="/2021/07/25/Study02/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -448,7 +448,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bug%E4%BF%AE%E5%A4%8D%E6%97%A5%E8%AE%B0/">Bug修复日记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Study/">Study</a><span class="category-list-count">4</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bug%E4%BF%AE%E5%A4%8D%E6%97%A5%E8%AE%B0/">Bug修复日记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Study/">Study</a><span class="category-list-count">6</span></li></ul>
   </aside>
 
 
@@ -464,34 +464,38 @@
         
           
           
-            <a class="list-group-item" href="/2021/07/26/Day05/"><i class="fa  fa-book"></i> 学习篇-04</a>
+            <a class="list-group-item" href="/2021/07/28/Study07/"><i class="fa  fa-book"></i> 学习篇-07</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/07/26/Day04/"><i class="fa  fa-book"></i> Bug篇-01</a>
+            <a class="list-group-item" href="/2021/07/26/Study06/"><i class="fa  fa-book"></i> 学习篇-06</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/07/25/Day03/"><i class="fa  fa-book"></i> 学习篇-03</a>
+            <a class="list-group-item" href="/2021/07/26/Study05/"><i class="fa  fa-book"></i> 学习篇-04</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/07/25/Day02/"><i class="fa  fa-book"></i> 学习篇-02</a>
+            <a class="list-group-item" href="/2021/07/26/Bug01/"><i class="fa  fa-book"></i> Bug篇-01</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2021/07/24/Day01/"><i class="fa  fa-book"></i> 学习篇-01</a>
+            <a class="list-group-item" href="/2021/07/25/Study03/"><i class="fa  fa-book"></i> 学习篇-03</a>
             
           
         
+          
+            
+          
+            
       </ul>
   </div>
   </aside>
