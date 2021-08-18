@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/images/1627128236680.webp">
-  <title>学习篇-02 | 喵乜菓</title>
+  <title>学习篇-04 | 喵乜菓</title>
   <meta name="author" content="hunagkun yang" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,19 +15,19 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="Java里的数据类型">
+  <meta name="description" content="变量作用域">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习篇-02">
-<meta property="og:url" content="https://dc-huang.github.io/2021/07/25/Study02/index.html">
+<meta property="og:title" content="学习篇-04">
+<meta property="og:url" content="https://dc-huang.github.io/2021/07/26/Study04/index.html">
 <meta property="og:site_name" content="喵乜菓">
-<meta property="og:description" content="Java里的数据类型">
+<meta property="og:description" content="变量作用域">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dc-huang.github.io/2021/07/25/Study02/head.webp">
-<meta property="article:published_time" content="2021-07-25T06:39:06.502Z">
-<meta property="article:modified_time" content="2021-07-26T07:07:13.299Z">
+<meta property="og:image" content="https://dc-huang.github.io/images/1627128236680.webp">
+<meta property="article:published_time" content="2021-07-26T06:46:05.613Z">
+<meta property="article:modified_time" content="2021-07-26T07:11:05.858Z">
 <meta property="article:author" content="hunagkun yang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dc-huang.github.io/2021/07/25/Study02/head.webp">
+<meta name="twitter:image" content="https://dc-huang.github.io/images/1627128236680.webp">
 <meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
@@ -146,17 +146,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">学习篇-02</h1>
+                <h1 class="kratos-entry-title text-center">学习篇-04</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-07-25</li>
+                <li><i class="fa fa-calendar"></i> 2021-07-26</li>
                 <li><i class="fa fa-user"></i> 作者 hunagkun yang</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        642
+                        429
                     
                     字
                 </li>
@@ -165,66 +165,44 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1627283233299"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1627283465858"></time> 前，其中的内容可能需要更新。
             </div>
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E9%87%8C%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">Java里的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%EF%BC%88primitive-type%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">基本类型（primitive type）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">数值类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">Boolean类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%EF%BC%88reference-type%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">引用类型（reference type）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.3.1.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.2.</span> <span class="toc-text">接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">1.3.3.</span> <span class="toc-text">数组</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.</span> <span class="toc-text">变量作用域</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">常量</span></a></li></ol>
                 </div>
             
             <hr />
-            <h1 id="Java里的数据类型"><a href="#Java里的数据类型" class="headerlink" title="Java里的数据类型"></a>Java里的数据类型</h1><span id="more"></span>
+            <h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><span id="more"></span>
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>计算机语言一般分为<strong>强类型语言</strong>和<strong>弱类型语言</strong>：<strong>强类型语言</strong>（强类型定义语言）指要求变量的使用要严格符合规定，所有变量都必须先定义后才能使用，<strong>弱类型语言</strong>与之相反，而Java属于强类型语言。</p>
-<h2 id="基本类型（primitive-type）"><a href="#基本类型（primitive-type）" class="headerlink" title="基本类型（primitive type）"></a>基本类型（primitive type）</h2><h3 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h3><table>
-<thead>
-<tr>
-<th>类型名称</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>整数类型</td>
-<td>byte（1byte）</td>
-<td>short(2byte)</td>
-<td>int(4byte)</td>
-<td>long(8byte)</td>
-</tr>
-<tr>
-<td>浮点类型</td>
-<td>float(4byte)</td>
-<td>double(8byte)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>字符类型</td>
-<td>char(2byte)</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>拓展：</p>
-<ol>
-<li><p>整数拓展：二进制0b后缀    八进制0后缀    十六进制0x后缀</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Variable</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> allClicks=<span class="number">0</span>;		<span class="comment">//类变量</span></span><br><span class="line">    String str=<span class="string">&quot;hello world&quot;</span>;		<span class="comment">//实例变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;		<span class="comment">//局部变量</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>类变量</p>
+<p>加了static关机键词</p>
+<p>类里面都可以调用</p>
 </li>
-<li><p>浮点数拓展：浮点数是有限的，离散的，存在舍入误差。举例：银行业务怎么表示？注意，不能用浮点数来进行数值操作，而是采用BigDecimal（大数类型）这个类来处理。</p>
+<li><p>实例变量</p>
+<p>类里面</p>
+<p>默认初始化</p>
+<p>需要通过对象调用</p>
 </li>
-<li><p>字符拓展：<img src="/2021/07/25/Study02/%E7%BC%96%E7%A0%81%E8%A1%A8.jpg" alt="编码表"></p>
+<li><p>局部变量</p>
+<p>方法里面</p>
+<p>局部变量必须声明和初始化</p>
+<p>对应方法里面调用</p>
 </li>
-</ol>
-<h3 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h3><p>boolean类型占1位其值只有true和false两个</p>
-<p>拓展：</p>
-<p>下列代码一样</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">if</span>(flag)&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Hello World!!!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(flag==<span class="keyword">true</span>)&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Hello World!!!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</ul>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> 常量名=值;</span><br><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> salary=<span class="number">2500</span>;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>常量（Constant）：初始化（initialize）后不能再改变的值！不会变动的值</li>
+<li>所谓常量可以理解成一种特殊的变量，它的值被设定后，在程序运行过程中不允许被改变</li>
+<li>常量名一般使用大写字符</li>
+</ul>
 
-
-<h2 id="引用类型（reference-type）"><a href="#引用类型（reference-type）" class="headerlink" title="引用类型（reference type）"></a>引用类型（reference type）</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -277,7 +255,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://dc-huang.github.io/2021/07/25/Study02/",
+                text: "https://dc-huang.github.io/2021/07/26/Study04/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -289,9 +267,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://dc-huang.github.io/2021/07/25/Study02/";
-            const title         = "「学习篇-02」";
-            const excerpt       = `Java里的数据类型`;
+            const hostUrl       = "https://dc-huang.github.io/2021/07/26/Study04/";
+            const title         = "「学习篇-04」";
+            const excerpt       = `变量作用域`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -322,12 +300,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 学习篇-01" href="/2021/07/24/Study01/">&lt; 上一篇</a>
+                <a title=" Bug篇-01" href="/2021/07/26/Bug01/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" 学习篇-03" href="/2021/07/25/Study03/">下一篇 &gt;</a>
+                <a title=" 学习篇-06" href="/2021/07/26/Study06/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -370,7 +348,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E9%87%8C%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">Java里的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%EF%BC%88primitive-type%EF%BC%89"><span class="toc-text">基本类型（primitive type）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="toc-text">数值类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean%E7%B1%BB%E5%9E%8B"><span class="toc-text">Boolean类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%EF%BC%88reference-type%EF%BC%89"><span class="toc-text">引用类型（reference type）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-text">接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">变量作用域</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-text">常量</span></a></li></ol>
     </div>
 </aside>
                 
