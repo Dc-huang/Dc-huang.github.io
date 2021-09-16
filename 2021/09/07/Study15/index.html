@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/images/1627128236680.webp">
-  <title>学习篇-03 | 喵乜菓</title>
+  <title>学习篇-15 | 喵乜菓</title>
   <meta name="author" content="hunagkun yang" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,19 +15,19 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="Java里面数值转换值得注意的点">
+  <meta name="description" content="Map类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习篇-03">
-<meta property="og:url" content="https://dc-huang.github.io/2021/07/25/Study03/index.html">
+<meta property="og:title" content="学习篇-15">
+<meta property="og:url" content="https://dc-huang.github.io/2021/09/07/Study15/index.html">
 <meta property="og:site_name" content="喵乜菓">
-<meta property="og:description" content="Java里面数值转换值得注意的点">
+<meta property="og:description" content="Map类">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dc-huang.github.io/2021/07/25/Study03/head.webp">
-<meta property="article:published_time" content="2021-07-25T14:30:33.016Z">
-<meta property="article:modified_time" content="2021-07-26T07:07:15.674Z">
+<meta property="og:image" content="https://dc-huang.github.io/images/1627128236680.webp">
+<meta property="article:published_time" content="2021-09-07T14:00:13.923Z">
+<meta property="article:modified_time" content="2021-09-05T10:14:22.898Z">
 <meta property="article:author" content="hunagkun yang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dc-huang.github.io/2021/07/25/Study03/head.webp">
+<meta name="twitter:image" content="https://dc-huang.github.io/images/1627128236680.webp">
 <meta name="twitter:site" content="@null">
   
   <!-- 站点验证相关 -->
@@ -146,17 +146,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">学习篇-03</h1>
+                <h1 class="kratos-entry-title text-center">学习篇-15</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-07-25</li>
+                <li><i class="fa fa-calendar"></i> 2021-09-07</li>
                 <li><i class="fa fa-user"></i> 作者 hunagkun yang</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        310
+                        ~6.07K
                     
                     字
                 </li>
@@ -165,19 +165,50 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1627283235674"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1630836862898"></time> 前，其中的内容可能需要更新。
             </div>
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E9%87%8C%E9%9D%A2%E6%95%B0%E5%80%BC%E8%BD%AC%E6%8D%A2%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">Java里面数值转换值得注意的点</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Map%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">Map类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HashMap%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">HashMap类</span></a></li></ol>
                 </div>
             
             <hr />
-            <h1 id="Java里面数值转换值得注意的点"><a href="#Java里面数值转换值得注意的点" class="headerlink" title="Java里面数值转换值得注意的点"></a>Java里面数值转换值得注意的点</h1><span id="more"></span>
+            <h1 id="Map类"><a href="#Map类" class="headerlink" title="Map类"></a>Map类</h1><span id="more"></span>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> num_one=<span class="number">10_0000_0000</span>;</span><br><span class="line">        <span class="keyword">int</span> num_two=<span class="number">20</span>;</span><br><span class="line">        <span class="keyword">long</span> num_thr=num_one*num_two;</span><br><span class="line">        System.out.println(num_thr);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上述代码<code> num_one*num_two</code>存在数值溢出，在num_thr（long）接受之前已经数值溢出，所以输出结果仍会报错！！！</p>
+<ul>
+<li><p>特点：存储一对数据（key-value），无序，无下标，键不可重复，值可以重复。</p>
+</li>
+<li><p>方法：</p>
+<ul>
+<li><p>V put(K key, V value)        //将对象存入到集合中，关联键值。key重复则覆盖原值。</p>
+</li>
+<li><p>Object get(Object key)        //根据键获取对应的值。</p>
+</li>
+<li><p>Set**<K>**        //返回所有key</K></p>
+</li>
+<li><p>Collection**<V>**values()        //返回包含所有值的Collection集合。</V></p>
+</li>
+<li><p>Set&lt;Map,Entry&lt;K, V&gt;&gt;        //键值匹配的Set集合。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="HashMap类"><a href="#HashMap类" class="headerlink" title="HashMap类"></a>HashMap类</h1><ul>
+<li><p>构造一个默认初始容量（16）和默认加载因子（0.75）的空HashMap。</p>
+</li>
+<li><p>使用key的hashcode和equals作为重复依据</p>
+</li>
+<li><p>源码：</p>
+<ul>
+<li><p>存储结构：数组+链表+红黑树</p>
+</li>
+<li><p>size：元素个数</p>
+</li>
+<li><p>```java<br>transient Node&lt;K,V&gt;[] table; //存储结构里的数组，当数组长度&gt;=64，链表长度&gt;=8时，采用红黑树存储。链表长度&lt;6时调整为链表，而非树。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">    public HashMap() &#123;</span><br><span class="line">        this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public V put(K key, V value) &#123;</span><br><span class="line">        return putVal(hash(key), key, value, false, true);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    final V putVal(int hash, K key, V value, boolean onlyIfAbsent,</span><br><span class="line">                   boolean evict) &#123;</span><br><span class="line">        Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; p; int n, i;</span><br><span class="line">        if ((tab = table) == null || (n = tab.length) == 0)</span><br><span class="line">            n = (tab = resize()).length;			//resize()扩充数组容量，在初始化扩充后，每一次扩充都为原来的两倍</span><br><span class="line">        if ((p = tab[i = (n - 1) &amp; hash]) == null)</span><br><span class="line">            tab[i] = newNode(hash, key, value, null);</span><br><span class="line">        else &#123;</span><br><span class="line">            Node&lt;K,V&gt; e; K k;</span><br><span class="line">            if (p.hash == hash &amp;&amp;</span><br><span class="line">                ((k = p.key) == key || (key != null &amp;&amp; key.equals(k))))</span><br><span class="line">                e = p;</span><br><span class="line">            else if (p instanceof TreeNode)</span><br><span class="line">                e = ((TreeNode&lt;K,V&gt;)p).putTreeVal(this, tab, hash, key, value);</span><br><span class="line">            else &#123;</span><br><span class="line">                for (int binCount = 0; ; ++binCount) &#123;</span><br><span class="line">                    if ((e = p.next) == null) &#123;</span><br><span class="line">                        p.next = newNode(hash, key, value, null);</span><br><span class="line">                        if (binCount &gt;= TREEIFY_THRESHOLD - 1) // -1 for 1st</span><br><span class="line">                            treeifyBin(tab, hash);</span><br><span class="line">                        break;</span><br><span class="line">                    &#125;</span><br><span class="line">                    if (e.hash == hash &amp;&amp;</span><br><span class="line">                        ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))</span><br><span class="line">                        break;</span><br><span class="line">                    p = e;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if (e != null) &#123; // existing mapping for key</span><br><span class="line">                V oldValue = e.value;</span><br><span class="line">                if (!onlyIfAbsent || oldValue == null)</span><br><span class="line">                    e.value = value;</span><br><span class="line">                afterNodeAccess(e);</span><br><span class="line">                return oldValue;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ++modCount;</span><br><span class="line">        if (++size &gt; threshold)</span><br><span class="line">            resize();</span><br><span class="line">        afterNodeInsertion(evict);</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    final Node&lt;K,V&gt;[] resize() &#123;</span><br><span class="line">        Node&lt;K,V&gt;[] oldTab = table;</span><br><span class="line">        int oldCap = (oldTab == null) ? 0 : oldTab.length;</span><br><span class="line">        int oldThr = threshold;</span><br><span class="line">        int newCap, newThr = 0;</span><br><span class="line">        if (oldCap &gt; 0) &#123;</span><br><span class="line">            if (oldCap &gt;= MAXIMUM_CAPACITY) &#123;</span><br><span class="line">                threshold = Integer.MAX_VALUE;</span><br><span class="line">                return oldTab;</span><br><span class="line">            &#125;</span><br><span class="line">            else if ((newCap = oldCap &lt;&lt; 1) &lt; MAXIMUM_CAPACITY &amp;&amp;</span><br><span class="line">                     oldCap &gt;= DEFAULT_INITIAL_CAPACITY)</span><br><span class="line">                newThr = oldThr &lt;&lt; 1; // double threshold</span><br><span class="line">        &#125;</span><br><span class="line">        else if (oldThr &gt; 0) // initial capacity was placed in threshold</span><br><span class="line">            newCap = oldThr;</span><br><span class="line">        else &#123;               // zero initial threshold signifies using defaults</span><br><span class="line">            newCap = DEFAULT_INITIAL_CAPACITY;</span><br><span class="line">            newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);</span><br><span class="line">        &#125;</span><br><span class="line">        if (newThr == 0) &#123;</span><br><span class="line">            float ft = (float)newCap * loadFactor;</span><br><span class="line">            newThr = (newCap &lt; MAXIMUM_CAPACITY &amp;&amp; ft &lt; (float)MAXIMUM_CAPACITY ?</span><br><span class="line">                      (int)ft : Integer.MAX_VALUE);</span><br><span class="line">        &#125;</span><br><span class="line">        threshold = newThr;</span><br><span class="line">        @SuppressWarnings(&#123;&quot;rawtypes&quot;,&quot;unchecked&quot;&#125;)</span><br><span class="line">            Node&lt;K,V&gt;[] newTab = (Node&lt;K,V&gt;[])new Node[newCap];</span><br><span class="line">        table = newTab;</span><br><span class="line">        if (oldTab != null) &#123;</span><br><span class="line">            for (int j = 0; j &lt; oldCap; ++j) &#123;</span><br><span class="line">                Node&lt;K,V&gt; e;</span><br><span class="line">                if ((e = oldTab[j]) != null) &#123;</span><br><span class="line">                    oldTab[j] = null;</span><br><span class="line">                    if (e.next == null)</span><br><span class="line">                        newTab[e.hash &amp; (newCap - 1)] = e;</span><br><span class="line">                    else if (e instanceof TreeNode)</span><br><span class="line">                        ((TreeNode&lt;K,V&gt;)e).split(this, newTab, j, oldCap);</span><br><span class="line">                    else &#123; // preserve order</span><br><span class="line">                        Node&lt;K,V&gt; loHead = null, loTail = null;</span><br><span class="line">                        Node&lt;K,V&gt; hiHead = null, hiTail = null;</span><br><span class="line">                        Node&lt;K,V&gt; next;</span><br><span class="line">                        do &#123;</span><br><span class="line">                            next = e.next;</span><br><span class="line">                            if ((e.hash &amp; oldCap) == 0) &#123;</span><br><span class="line">                                if (loTail == null)</span><br><span class="line">                                    loHead = e;</span><br><span class="line">                                else</span><br><span class="line">                                    loTail.next = e;</span><br><span class="line">                                loTail = e;</span><br><span class="line">                            &#125;</span><br><span class="line">                            else &#123;</span><br><span class="line">                                if (hiTail == null)</span><br><span class="line">                                    hiHead = e;</span><br><span class="line">                                else</span><br><span class="line">                                    hiTail.next = e;</span><br><span class="line">                                hiTail = e;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; while ((e = next) != null);</span><br><span class="line">                        if (loTail != null) &#123;</span><br><span class="line">                            loTail.next = null;</span><br><span class="line">                            newTab[j] = loHead;</span><br><span class="line">                        &#125;</span><br><span class="line">                        if (hiTail != null) &#123;</span><br><span class="line">                            hiTail.next = null;</span><br><span class="line">                            newTab[j + oldCap] = hiHead;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return newTab;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
 
         </div>
         
@@ -231,7 +262,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://dc-huang.github.io/2021/07/25/Study03/",
+                text: "https://dc-huang.github.io/2021/09/07/Study15/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -243,9 +274,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://dc-huang.github.io/2021/07/25/Study03/";
-            const title         = "「学习篇-03」";
-            const excerpt       = `Java里面数值转换值得注意的点`;
+            const hostUrl       = "https://dc-huang.github.io/2021/09/07/Study15/";
+            const title         = "「学习篇-15」";
+            const excerpt       = `Map类`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -267,7 +298,7 @@
                     
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-07-26</span>
+                <span>最后编辑：2021-09-05</span>
                 </div>
             </div>
         </footer>
@@ -276,12 +307,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 学习篇-02" href="/2021/07/25/Study02/">&lt; 上一篇</a>
+                <a title=" 学习篇-14" href="/2021/08/26/Study14/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Bug篇-01" href="/2021/07/26/Bug01/">下一篇 &gt;</a>
+                <a title=" 学习篇-16" href="/2021/09/16/Study16/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -324,7 +355,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E9%87%8C%E9%9D%A2%E6%95%B0%E5%80%BC%E8%BD%AC%E6%8D%A2%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E7%82%B9"><span class="toc-text">Java里面数值转换值得注意的点</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Map%E7%B1%BB"><span class="toc-text">Map类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HashMap%E7%B1%BB"><span class="toc-text">HashMap类</span></a></li></ol>
     </div>
 </aside>
                 

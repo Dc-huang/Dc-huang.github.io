@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/images/1627128236680.webp">
-  <title>喵乜菓</title>
+  <title>学习篇-13 | 喵乜菓</title>
   <meta name="author" content="hunagkun yang" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,14 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="你我所见，漫天星河">
-<meta property="og:type" content="website">
-<meta property="og:title" content="喵乜菓">
-<meta property="og:url" content="https://dc-huang.github.io/categories/Bug%E4%BF%AE%E5%A4%8D%E6%97%A5%E8%AE%B0/index.html">
+  <meta name="description" content="Calendar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习篇-13">
+<meta property="og:url" content="https://dc-huang.github.io/2021/08/21/Study13/index.html">
 <meta property="og:site_name" content="喵乜菓">
-<meta property="og:description" content="你我所见，漫天星河">
+<meta property="og:description" content="Calendar">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://dc-huang.github.io/images/1627128236680.webp">
+<meta property="article:published_time" content="2021-08-20T16:01:34.936Z">
+<meta property="article:modified_time" content="2021-08-20T16:01:08.410Z">
 <meta property="article:author" content="hunagkun yang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dc-huang.github.io/images/1627128236680.webp">
@@ -140,68 +142,169 @@
 
         
 
+            <article>
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
             
-    
-    
-        <article class="kratos-hentry clearfix">
-            <div class="kratos-entry-border-new clearfix">
+                <h1 class="kratos-entry-title text-center">学习篇-13</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2021-08-21</li>
+                <li><i class="fa fa-user"></i> 作者 hunagkun yang</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        559
+                    
+                    字
+                </li>
                 
-                <div class="kratos-entry-thumb-new">
-                    <a href="/2021/07/26/Bug01/">
-                        
-                            <img class="kratos-entry-thumb-new-img" src="/2021/07/26/Bug01/head.webp">
-                        
-                    </a>
-                </div>
-                <div class="kratos-post-inner-new">
-                    <header class="kratos-entry-header-new">
-                            <a class="label-link" href="/categories/Bug%E4%BF%AE%E5%A4%8D%E6%97%A5%E8%AE%B0/">Bug修复日记</a>
-                        <h2 class="kratos-entry-title-new"><a href="/2021/07/26/Bug01/">Bug篇-01</a>
-                    </header>
-                    <div class="kratos-entry-content-new">
-                        <p>
-                            
-                                Blog文章缩略图显示BUG
-                            
-                        </p>
-                    </div>
-                </div>
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a>
-                            <i class="fa fa-calendar"></i>
-                            2021-07-26
-                        </a>
-                        <a>
-                            
-                        </a>
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    <span class="pull-right">
-                        <a class="read-more" href="/2021/07/26/Bug01/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                    </span>
-                </footer>
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                本文最后编辑于 <time datetime="1629475268410"></time> 前，其中的内容可能需要更新。
             </div>
-        </article>
-    
+            
+                <div class="kratos-post-inner-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Calendar"><span class="toc-number">1.</span> <span class="toc-text">Calendar</span></a></li></ol>
+                </div>
+            
+            <hr />
+            <h1 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h1><span id="more"></span>
+
+<ul>
+<li><p>Calendar提供了获取或设置各种日历字段的方法。</p>
+</li>
+<li><p>构造方法：<strong>protectrd Calendar()<strong>：由于修饰符是</strong>protected</strong>，所以无法直接创建该对象。</p>
+</li>
+<li><p>其他方法：</p>
+<ol>
+<li><p>static Calendar getInstance()，使用默认时区和区域获取日历（也是创建Calendar对象的方法）。</p>
+</li>
+<li><p>long getTimeInMillies()，毫秒为单位返回该日历的时间值（以1970年1月1日为基准）。</p>
+</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        	Calendar calendar=Calendar.getInstance();</span><br><span class="line">        	System.out.println(calendar.getTime().toLocaleString();</span><br><span class="line">        	System.out.println(calendar.getTimeInMillis());    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;                             </span><br></pre></td></tr></table></figure>
 
 
 
 
 
-    <div class="hidden">
-        <!-- 加载文章阅读对应的统计功能，评论自带的那种 -->
+
+        </div>
         
+            <div class="kratos-copyright text-center clearfix">
+                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
     </div>
-
-
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://dc-huang.github.io/2021/08/21/Study13/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://dc-huang.github.io/2021/08/21/Study13/";
+            const title         = "「学习篇-13」";
+            const excerpt       = `Calendar`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    
+                </div>
+                <div class="pull-date">
+                <span>最后编辑：2021-08-21</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 学习篇-12" href="/2021/08/20/Study12/">&lt; 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 学习篇-14" href="/2021/08/26/Study14/">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+</article>
 
         
 
@@ -214,8 +317,6 @@
 
 <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
     <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
-    
-        <div class="sticky-area">
     
     
                 <aside id="krw-about" class="widget widget-kratos-about clearfix">
@@ -230,6 +331,20 @@
     </div>
 </aside>
             
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Calendar"><span class="toc-text">Calendar</span></a></li></ol>
+    </div>
+</aside>
+                
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
