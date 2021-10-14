@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/images/1627128236680.webp">
-  <title>学习篇-13 | 喵乜菓</title>
+  <title>学习篇-19 | 喵乜菓</title>
   <meta name="author" content="hunagkun yang" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="Calendar">
+  <meta name="description" content="IP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习篇-13">
-<meta property="og:url" content="https://dc-huang.github.io/2021/08/21/Study13/index.html">
+<meta property="og:title" content="学习篇-19">
+<meta property="og:url" content="https://dc-huang.github.io/2021/09/19/Study19/index.html">
 <meta property="og:site_name" content="喵乜菓">
-<meta property="og:description" content="Calendar">
+<meta property="og:description" content="IP">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://dc-huang.github.io/images/1627128236680.webp">
-<meta property="article:published_time" content="2021-08-20T16:01:34.936Z">
-<meta property="article:modified_time" content="2021-08-20T16:01:08.410Z">
+<meta property="article:published_time" content="2021-09-19T15:37:41.672Z">
+<meta property="article:modified_time" content="2021-09-19T15:37:18.280Z">
 <meta property="article:author" content="hunagkun yang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dc-huang.github.io/images/1627128236680.webp">
@@ -146,17 +146,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">学习篇-13</h1>
+                <h1 class="kratos-entry-title text-center">学习篇-19</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-08-21</li>
+                <li><i class="fa fa-calendar"></i> 2021-09-19</li>
                 <li><i class="fa fa-user"></i> 作者 hunagkun yang</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        559
+                        271
                     
                     字
                 </li>
@@ -165,36 +165,35 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1629475268410"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1632065838280"></time> 前，其中的内容可能需要更新。
             </div>
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Calendar"><span class="toc-number">1.</span> <span class="toc-text">Calendar</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IP"><span class="toc-number">1.</span> <span class="toc-text">IP</span></a></li></ol>
                 </div>
             
             <hr />
-            <h1 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h1><span id="more"></span>
+            <h1 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h1><span id="more"></span>
 
+<p>IP地址：InetAddress(类)</p>
 <ul>
-<li><p>Calendar提供了获取或设置各种日历字段的方法。</p>
+<li>唯一定位一台网络计算机</li>
+<li>127.0.0.1：本机 localhost</li>
+<li>IP地址分类：<ul>
+<li>IP地址分类：ipv4/ipv6<ul>
+<li>ipv4:127.0.0.1，四个字节组成，0-255,42亿；30亿在北美，亚洲4亿，2011年用尽</li>
+<li>ipv6:2001:0bb2:aaaa:0015:0000:0000:1aaa:1312(瞎写的)，128位，8个无符号整数表示</li>
+</ul>
 </li>
-<li><p>构造方法：<strong>protectrd Calendar()<strong>：由于修饰符是</strong>protected</strong>，所以无法直接创建该对象。</p>
+<li>公网-私网<ul>
+<li>公网：互联网；ABCD类地址</li>
+<li>私网：局域网（专门给组织内部使用，比如一个镇里的家用网络）；</li>
+</ul>
 </li>
-<li><p>其他方法：</p>
-<ol>
-<li><p>static Calendar getInstance()，使用默认时区和区域获取日历（也是创建Calendar对象的方法）。</p>
-</li>
-<li><p>long getTimeInMillies()，毫秒为单位返回该日历的时间值（以1970年1月1日为基准）。</p>
-</li>
-</ol>
+<li>域名：记忆IP问题</li>
+</ul>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        	Calendar calendar=Calendar.getInstance();</span><br><span class="line">        	System.out.println(calendar.getTime().toLocaleString();</span><br><span class="line">        	System.out.println(calendar.getTimeInMillis());    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;                             </span><br></pre></td></tr></table></figure>
-
-
-
-
-
 
         </div>
         
@@ -248,7 +247,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://dc-huang.github.io/2021/08/21/Study13/",
+                text: "https://dc-huang.github.io/2021/09/19/Study19/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -260,9 +259,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://dc-huang.github.io/2021/08/21/Study13/";
-            const title         = "「学习篇-13」";
-            const excerpt       = `Calendar`;
+            const hostUrl       = "https://dc-huang.github.io/2021/09/19/Study19/";
+            const title         = "「学习篇-19」";
+            const excerpt       = `IP`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -284,7 +283,7 @@
                     
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-08-21</span>
+                <span>最后编辑：2021-09-19</span>
                 </div>
             </div>
         </footer>
@@ -293,13 +292,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 学习篇-12" href="/2021/08/20/Study12/">&lt; 上一篇</a>
+                <a title=" 学习篇-18" href="/2021/09/19/Study18/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" 学习篇-14" href="/2021/08/26/Study14/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
@@ -341,7 +336,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Calendar"><span class="toc-text">Calendar</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#IP"><span class="toc-text">IP</span></a></li></ol>
     </div>
 </aside>
                 
